@@ -1,0 +1,9 @@
+include /blocks/logotype/logotype
+include /blocks/splash-image/splash-image
+
+mixin header()
+	+b.HEADER.header&attributes(attributes)
+		+e.bar
+		+e.bar_black
+		+splash-image
+		+logotype

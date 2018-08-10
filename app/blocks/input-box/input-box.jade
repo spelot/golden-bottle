@@ -1,0 +1,5 @@
+mixin input-box(labelText, nameString)
+	+b.input-box&attributes()
+		+e.P.label
+			|#{labelText}
+		+e.INPUT.input&attributes({placeholder: labelText, name: nameString})

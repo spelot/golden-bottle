@@ -1,0 +1,14 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/preloader/preloader
+include /blocks/header/header
+include /blocks/wrapper/wrapper
+
+block head
+	- var pageTitle = 'Golden Bottle';
+
+block content
+	+preloader
+	div.content(style='display: none')
+		+header
+		+wrapper

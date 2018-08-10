@@ -1,0 +1,52 @@
+.radio-buttons
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items stretch
+	margin-top 50px
+	margin-bottom 70px
+
+	@media (max-width: mediaFirstPoint)
+		flex-direction column
+		margin-top 20px
+		margin-bottom 20px
+
+	&__input
+		&:checked + label
+			color redColor
+
+			g
+				stroke redColor
+
+
+	&__label
+		height 100%
+		display flex
+		justify-content flex-end
+		align-items center
+		flex-direction column
+		font-family baseFontBold
+		font-size 16px
+		color goldenColor
+		line-height 20px
+		text-transform uppercase
+		cursor pointer
+		transition all 0.2s
+
+		p
+			margin-top 30px
+
+			@media (max-width: mediaFirstPoint)
+				margin-top 10px
+
+	&__option
+		@media (max-width: mediaFirstPoint)
+			margin-bottom 20px
+
+		&:hover
+			.radio-buttons__label
+				color redColor
+
+			g
+				stroke redColor
+

@@ -1,0 +1,8 @@
+mixin splash-image()
+	- var headerSplashImage = '/header_image.jpg';
+	- var headerTitle = 'Ваш шанс выиграть годовой запас пива от GoldenBottle!';
+
+	+b.splash-image&attributes(attributes)
+		+e.P.title
+			| #{headerTitle}
+		+e.IMG(src='#{headerSplashImage}' alt='Golden Bottle Logo')

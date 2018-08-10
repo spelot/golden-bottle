@@ -1,0 +1,35 @@
+.form
+	display flex
+	align-items center
+	flex-direction column
+	margin-top 100px
+
+	@media (max-width: mediaFirstPoint)
+		margin-top 20px
+
+	&__submit
+		display block
+		width buttonWidth
+		height buttonHeight
+		line-height buttonHeight
+		font-family baseFontBold
+		font-size 16px
+		text-transform uppercase
+		color white
+		background-color redColor
+		border none
+		outline none
+		transition background-color 0.5s
+		margin-top 50px
+		margin-bottom 80px
+
+		@media (max-width: mediaFirstPoint)
+			margin-top 25px
+			margin-bottom 40px
+
+		&:hover:not(.form__submit_disabled)
+			background-color buttonHoverColor
+
+		&_disabled
+			background-color buttonDisabledColor
+			color greyColor

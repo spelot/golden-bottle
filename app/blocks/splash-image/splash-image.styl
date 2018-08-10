@@ -1,0 +1,25 @@
+.splash-image
+	display block
+	position relative
+
+	&__title
+		width 760px
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		font-family baseFontBold
+		font-size 50px
+		line-height 66px
+		letter-spacing -1px
+		color white
+		text-align center
+
+		@media (max-width: mediaFirstPoint)
+			font-size 18px
+			line-height 22px
+			max-width 760px
+			width 100%
+
+	img
+		width 100%

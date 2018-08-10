@@ -1,0 +1,10 @@
+include /blocks/radio-buttons/radio-buttons
+
+mixin question()
+	- var question = 'В чем отличие настоящего шотландского стаута от обычного темного пива?';
+
+	+b.question&attributes(attributes)
+		+e.P.text #{question}
+		+radio-buttons
+		+e.P.description
+			|Настоящий солод для шотландского стаута проходит три стадии обработки, после которых вкусовые качества напитка получаются совершенно бесподобными!

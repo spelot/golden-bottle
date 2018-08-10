@@ -1,0 +1,9 @@
+include /blocks/user-info/user-info
+include /blocks/question/question
+
+mixin form()
+	+b.FORM.form&attributes({action: '/test.php'})
+		+user-info
+		+question
+		+e.BUTTON.submit&attributes({type: 'submit'})
+			|Отправить

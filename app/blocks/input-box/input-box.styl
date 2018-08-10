@@ -1,0 +1,58 @@
+.input-box
+	display block
+	position relative
+
+	@media (max-width: mediaFirstPoint)
+		margin-bottom 40px
+
+	&__label
+		position absolute
+		width inputWidth
+		font-family baseFont
+		font-size 12px
+		color greyColor
+		text-align center
+		text-transform uppercase
+		top 0
+		transform translateY(-150%)
+		display none
+
+	&__input
+		border inputBaseBorder solid greyColor
+		width inputWidth
+		height inputHeight
+		padding inputPadding
+		text-align center
+		text-transform uppercase
+		transition border 0.3s
+
+		&::placeholder
+			font-family baseFont
+			font-size 14px
+			color blackColor
+			opacity 1
+			transition opacity 0.5s
+
+		&:focus
+			&::placeholder
+				opacity 0
+
+		&_done
+			border-color goldenColor
+
+		&_error
+			border-width 1px
+			border-color redColor
+
+			&::placeholder
+				opacity 0
+
+	&__tooltip-error
+		position absolute
+		width inputWidth
+		font-family baseFont
+		font-size 12px
+		color redColor
+		text-align center
+		bottom 0
+		transform translateY(150%)

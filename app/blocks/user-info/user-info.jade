@@ -1,0 +1,7 @@
+include /blocks/input-box/input-box
+
+mixin user-info()
+	+b.user-info&attributes(attributes)
+		+input-box('Имя фамилия', 'name')
+		+input-box('Телефон', 'tel')
+		+input-box('E-mail', 'email')

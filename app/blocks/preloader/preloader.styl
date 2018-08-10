@@ -1,0 +1,31 @@
+animationDuration = 1.2s
+scaleFrom = 1
+scaleTo = 1.2
+colorFrom = #362C26
+colorTo = #CFAA6B
+
+.preloader
+	display flex
+	justify-content center
+	align-items center
+
+	&__bottle
+		animation bottle-scale animationDuration infinite
+		transform-origin center center
+		transform-box fill-box
+
+		path
+			fill colorFrom
+			animation bottle-color animationDuration infinite
+
+	@keyframes bottle-scale
+		0%
+			transform scale(scaleFrom, scaleFrom)
+		50%
+			transform scale(scaleTo, scaleTo)
+
+	@keyframes bottle-color
+		0%
+			fill colorFrom
+		50%
+			fill colorTo
